@@ -1,0 +1,130 @@
+body{
+	margin: 20px;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+}
+
+#github{
+	position: absolute;
+	left: 50%;
+	top: 95%;
+	-webkit-transform: translate(-50%, -95%);
+	transform: translate(-50%, -95%);
+	font-size: 25px;
+	text-decoration: none;
+	color:black;
+}
+
+#github:hover{
+	text-decoration: none;
+	color:#c42929;
+}
+
+#anthonyHeader{
+	text-decoration: none;
+	font-size: 20px;
+	color:black;
+}
+
+#anthonyHeader:hover{
+	text-decoration: none;
+	color:#c42929;
+}
+
+#entryMenu{
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	border: 3px solid #498fff;
+	padding: 2em 2em 2em 2em;
+	text-align: center;
+}
+
+#entryInputField{
+	outline-style: auto;
+}
+
+#gameBoard{
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	border: 3px solid #498fff;
+	padding: 2em 2em 2em 2em;
+	text-align: center;
+	min-width: 420px;
+	min-height: 300px;
+}
+
+#gameTitle{
+	position: relative;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translate(-50%, -5%);
+  transform: translate(-50%, -5%);
+	border: 3px solid #498fff;
+	text-align: center;
+	min-width: 300px;
+	min-height: 100px;
+	line-height: 20px;
+}
+
+#hiddenTile{
+	background: #7b7b7b;
+	border: 1px solid #151616;
+	float: left;
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+	width: 40px;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 600;
+}
+
+#mineTile{
+	background: red;
+	border: 1px solid #151616;
+	float: left;
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+	width: 40px;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 600;
+}
+
+#normalTile{
+	background: #989da5;
+	border: 1px solid #151616;
+	float: left;
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+	width: 40px;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 600;
+}
+
+#emptyTile{
+	background: #989da5;
+	border: 1px solid #151616;
+	float: left;
+	line-height: 40px;
+	height: 40px;
+	text-align: center;
+	width: 40px;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 600;
+}
