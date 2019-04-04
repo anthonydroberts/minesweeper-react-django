@@ -23,6 +23,10 @@ class Tile extends React.Component {
       //flag
       return(<a id = "hiddenTile" onClick={this.props.onClick} onContextMenu={this.props.onContextMenu}>🚩</a>)
     }
+    else if (this.props.value == -4) {
+      //flag
+      return(<a id = "winMineTile" onClick={this.props.onClick}>⚠️</a>)
+    }
     else{
       //normal tile with neighbour mines
       return(<a id = "normalTile" onClick={this.props.onClick}>{this.props.value}</a>)
@@ -69,11 +73,13 @@ class Board extends React.Component {
       function exists(arr, search) {
         return arr.some(row => row.includes(search));
       }
-      if(!exists(response.board, -1)){
+      if(exists(response.board, -4)){
         getEnd = 1
+        alert("🏆Winner!🏆 Nice Job 😎");
       }
       if(exists(response.board, -2)){
         getEnd = 2
+        alert("💥BOOM💥 you lose ⚰️");
       }
       //traverse board and edit its values
       console.log(this.state.flaggedList);
@@ -112,12 +118,6 @@ class Board extends React.Component {
 
   handleClickEnd(){
     console.log("Clicked on game over: " + this.state.gameEnd)
-    if(this.state.gameEnd == 1){
-      alert("You win!")
-    }
-    if(this.state.gameEnd == 2){
-      alert("You lose!")
-    }
     ReactDOM.render(<Entry/>, document.getElementById('root'));
   }
 

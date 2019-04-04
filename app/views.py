@@ -145,7 +145,6 @@ def board(request):
             #if we hit a tile with 0 neighbours we now have to
             #reveal more tiles until we find all nearby numbered tiles
             #should be just a flood fill recursive function
-            print("hit 0")
             def flood_fill(row,col):
                 if (row < 0 or col < 0):
                     return
@@ -154,7 +153,6 @@ def board(request):
                 bombsNear = 0
                 bombsNear = nearbyBombs(row,col)
                 if(bombsNear > 0):
-                    print("found numbered tile")
                     b[row][col] = bombsNear
                     return
                 else:
@@ -205,14 +203,24 @@ def board(request):
 
         else:
             b[r][c] = closeMineCount
-            bList = b.tolist()
-            retrieve.board = json.dumps(bList)
-            retrieve.save()
-            #filter board of mines then return to client
-            b[b == -2] = -1
-            b = b.tolist()
-            print("RETURNING: " + str(b))
-            return JsonResponse({'board':b})
+            if not any(-1 in x for x in b):
+                print("Game won")
+                retrieve.delete()
+                #convert mines to undetonated
+                b[b == -2] = -4
+                b = b.tolist()
+                print("RETURNING GAME WON: " + str(b))
+                return JsonResponse({'board':b})
+
+            else:
+                bList = b.tolist()
+                retrieve.board = json.dumps(bList)
+                retrieve.save()
+                #filter board of mines then return to client
+                b[b == -2] = -1
+                b = b.tolist()
+                print("RETURNING: " + str(b))
+                return JsonResponse({'board':b})
 
     elif (b[r][c] == -2):
         print("Gameover")
