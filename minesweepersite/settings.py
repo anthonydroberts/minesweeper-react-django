@@ -26,7 +26,7 @@ SECRET_KEY = 'v_=#knc_es(!iyv_d=%5iyha@#q-64_tw6$4)t9j1uf87gzv(k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['minesweeper-adroberts.herokuapp.com']
 
 
 # Application definition
