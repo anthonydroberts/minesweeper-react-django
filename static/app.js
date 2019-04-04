@@ -121,11 +121,15 @@ class Board extends React.Component {
     ReactDOM.render(<Entry/>, document.getElementById('root'));
   }
 
+  handleReturnButton(){
+    console.log("return request");
+    ReactDOM.render(<Entry/>, document.getElementById('root'));
+  }
+
   componentDidMount(){
     fetch(`./getBoard/` + '?' + 'id=' + this.props.gameID)
     .then(response => response.json())
     .then(response =>{
-        console.log("NEW BOARD: " + response.board);
         var getEnd = 0;
         function exists(arr, search) {
           return arr.some(row => row.includes(search));
@@ -171,7 +175,7 @@ class Board extends React.Component {
             );
        });
     return(
-      <div>
+      <div id = "gameParent">
         <div id = "gameTitle">
           <h1>Minesweeper</h1>
           <a href = "http://adroberts.me/" target="_blank" id = "anthonyHeader">Anthony Roberts</a>
@@ -180,6 +184,12 @@ class Board extends React.Component {
         <div id = "gameBoard">
           {drawBoard}
         </div>
+        <div id = "gameReturnParent">
+          <button id = "gameReturnButton" onClick = {() => this.handleReturnButton()}>Return</button>
+        </div>
+        <a id = "github" href="https://github.com/anthonydroberts" target="_blank">
+          <i class = "fab fa-github-square"></i> Github
+        </a>
       </div>
     )
   }
@@ -285,6 +295,9 @@ class Entry extends React.Component {
           <input id = "entryInputField" type="text" size="4" placeholder="Game ID" />
           <input type="submit" value="Resume" />
         </form>
+        <a id = "github" href="https://github.com/anthonydroberts" target="_blank">
+          <i class = "fab fa-github-square"></i> Github
+        </a>
       </div>
     )
   }

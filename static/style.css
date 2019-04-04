@@ -1,19 +1,30 @@
+html{
+		height:100%;
+}
+
 body{
 	margin: 20px;
   padding: 0;
   font-family: sans-serif;
   background: #f4f4f4;
+	min-height: 800px;
+}
+
+#parentAll{
+	display:grid;
+}
+
+#root{
+	display:inline-block;
 }
 
 #github{
-	position: absolute;
-	left: 50%;
-	top: 95%;
-	-webkit-transform: translate(-50%, -95%);
-	transform: translate(-50%, -95%);
+	position:relative;
+	display:inline-block;
 	font-size: 25px;
 	text-decoration: none;
 	color:black;
+	margin-top:20px;
 }
 
 #github:hover{
@@ -47,30 +58,60 @@ body{
 	outline-style: auto;
 }
 
+#gameParent{
+	display:grid;
+	position:relative;
+	line-height: 20px;
+	text-align: center;
+}
+
 #gameBoard{
-	position: absolute;
+	display:inline-block;
+	position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 	border: 3px solid #498fff;
+	border-radius: 10px;
 	padding: 2em 2em 2em 2em;
 	text-align: center;
-	min-width: 420px;
-	min-height: 300px;
+	width: 420px;
+	height: 420px;
 }
 
 #gameTitle{
+	display:inline-block;
 	position: relative;
   left: 50%;
   top: 5%;
   -webkit-transform: translate(-50%, -5%);
   transform: translate(-50%, -5%);
-	border: 3px solid #498fff;
 	text-align: center;
-	min-width: 300px;
-	min-height: 100px;
+	width: 300px;
+	height: 150px;
 	line-height: 20px;
+}
+
+#gameReturnParent{
+	position:relative;
+	text-align: center;
+	display:inline-block;
+}
+
+#gameReturnButton{
+	margin-top: 10px;
+	background-color: white;
+	color: black;
+	border: 2px solid #498fff;
+	width:100px;
+	height:30px;
+	border-radius: 10px;
+}
+
+#gameReturnButton:hover{
+	background-color: #498fff;
+  color: white;
 }
 
 #hiddenTile{
@@ -85,6 +126,10 @@ body{
 	border-radius: 10px;
 	color: #fff;
 	font-weight: 600;
+}
+
+#hiddenTile:hover{
+	background: #4f4e4e;
 }
 
 #mineTile{
