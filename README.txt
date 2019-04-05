@@ -1,7 +1,7 @@
 Classic Minesweeper game which features saved game states that can be accessed via a game ID, aswell as a
 client-server set up to prevent cheating: ReactJS, Django, Postgresql
 
-Because of how Heroku handles the free-level Dyno the server may take a short time (~10 seconds) to spool up. The database is also reset every 24 hours!
+Because of how Heroku handles the free-level Dyno the server may take a short time (~10 seconds) to start up. The database is also reset every 24 hours!
 
 CONTROLS/GUIDE:
 Left click on a tile to attempt to clear it, if it is near bombs it will tell you how many - if the tile itself is a mine you lose!
