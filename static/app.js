@@ -54,11 +54,6 @@ class Board extends React.Component {
     //[[x1,y1],[x2,y2],....,etc]
     //if === to coordinate on boardFlag/
     //u know it's a flaggedList
-    //wow i love maya so much
-    //cuz i ge6 her to do so much shit for me
-    //otherwise i ignore her
-    //like wow im so glad to have a useful girlfr5iend
-    //so eaassy to love somebody that does shit for u
            }
 
          }
