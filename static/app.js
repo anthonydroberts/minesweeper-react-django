@@ -53,7 +53,6 @@ class Board extends React.Component {
     //x and y coordinates pf flaggedList/
     //[[x1,y1],[x2,y2],....,etc]
     //if === to coordinate on boardFlag/
-    //u know it's a flaggedList
            }
 
          }
