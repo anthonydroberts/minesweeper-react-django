@@ -11,7 +11,7 @@ PyMsgBox==1.0.6
 PyScreeze==0.1.18
 PyTweening==1.0.3
 pytz==2018.9
-sqlparse==0.3.0
+sqlparse==0.4.4
 virtualenv==16.4.3
 virtualenvwrapper-win==1.2.5
 whitenoise==4.1.2
